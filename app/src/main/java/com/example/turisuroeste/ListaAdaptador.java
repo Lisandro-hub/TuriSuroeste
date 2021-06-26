@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class ListaAdaptador extends RecyclerView.Adapter<ListaAdaptador.viewHolder>{
@@ -41,25 +43,23 @@ public class ListaAdaptador extends RecyclerView.Adapter<ListaAdaptador.viewHold
 
     public class viewHolder extends RecyclerView.ViewHolder {
         TextView nombreActividad;
+        TextView descripcion;
         ImageView fotoActividad;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
             nombreActividad=itemView.findViewById(R.id.nombreActividad);
+            descripcion=itemView.findViewById(R.id.descripcion);
             fotoActividad=itemView.findViewById(R.id.fotoActividad);
         }
 
         public void actualizarDatos(Turismo turismo) {
             nombreActividad.setText(turismo.getNombreActividad());
-            fotoActividad.setImageResource(turismo.getFotoActividad());
+            descripcion.setText(turismo.getDescription());
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent= new Intent(itemView.getContext(),MainActivity.class);
-                    intent.putExtra("datosTurismo",turismo);
-                    itemView.getContext().startActivity(intent);
-                }
-            });
+            Picasso.with(itemView.getContext())
+                    .load(turismo.getFotoActividad())
+                    .into(fotoActividad);
+
         }
     }
 }

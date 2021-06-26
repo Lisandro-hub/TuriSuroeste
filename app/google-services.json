@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "997670769390",
+    "project_id": "turisuroeste",
+    "storage_bucket": "turisuroeste.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997670769390:android:943ba653eae53b112fd9ff",
+        "android_client_info": {
+          "package_name": "com.example.turisuroeste"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "997670769390-jjlodn62b0br4deldetjb2uo4auc8cnp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMVEG7YUI_BXjoRvZdk8xKAE_D96VW5gQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "997670769390-jjlodn62b0br4deldetjb2uo4auc8cnp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

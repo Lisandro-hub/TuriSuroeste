@@ -4,17 +4,19 @@ import java.io.Serializable;
 
 public class Turismo implements Serializable {
     //Atributos
-    String nombreActividad;
-    int fotoActividad;
+    String nombreActividad,description,fotoActividad;
+
 
     //Metodo constructor
 
-    public Turismo(String nombreActividad, int fotoActividad) {
+    public Turismo(String nombreActividad, String description, String fotoActividad) {
         this.nombreActividad = nombreActividad;
+        this.description = description;
         this.fotoActividad = fotoActividad;
     }
 
     //Metodos de encapsulado
+
 
     public String getNombreActividad() {
         return nombreActividad;
@@ -24,11 +26,19 @@ public class Turismo implements Serializable {
         this.nombreActividad = nombreActividad;
     }
 
-    public int getFotoActividad() {
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getFotoActividad() {
         return fotoActividad;
     }
 
-    public void setFotoActividad(int fotoActividad) {
+    public void setFotoActividad(String fotoActividad) {
         this.fotoActividad = fotoActividad;
     }
 }
